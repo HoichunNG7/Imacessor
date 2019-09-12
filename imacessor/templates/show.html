@@ -1,0 +1,19 @@
+<img src="index/static/images/logo.JPG" alt="Imacessor">
+<h1>Process Result</h1>
+<br/>
+
+<p>Your image: {{ picture.photo.name }}</p>
+<br/>
+
+<img src="{{ picture.photo.url }}", height="200", width="300" />
+<br>
+
+<br>
+    <h3><b>What's in the picture?</b></h3>
+    <h4><b>{{ label }}</b></h4>
+
+
+<a href="{% url 'index' %}">Try Another One</a><br/><br/>
+<a href="{% url 'operation-history' %}">Check Operation History</a><br/><br/>
+<a href="{% url 'main' %}">Return to Main Page</a>
+

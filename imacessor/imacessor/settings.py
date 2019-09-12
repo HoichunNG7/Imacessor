@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'AccountManager'
+    'AccountManager',
+    'imageprocessing',
 ]
 
 MIDDLEWARE = [
@@ -119,4 +120,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# 用于解决html上（相对路径表示）图片无法显示问题
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static').replace('\\', '/')
+# 设置图片等静态文件的路径
+STATICFILES_DIRS = (
+    ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/history')
+
+# ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+# ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+# ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+# ('upload', os.path.join(STATIC_ROOT, 'upload').replace('\\', '/')),

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imacessor</title>
+</head>
+<body>
+	<div  id="title">
+		<img src="index/static/images/logo.JPG" alt="Imacessor">
+		<h2>A website providing image-processing services based on deep learning methods and models.</h2>
+	</div>
+	<form id="operation" action="/" method="post">
+		<select name="choice"> 
+		<option value='Signup'>Sign Up</option> 	
+		<option value='Login'>Login</option> 
+    </select>  <br/>
+    <input type="submit" value="Mode"/> 
+	</form>
+	<style type="text/css">
+		#title{
+		text-align: center;
+		vertical-align: middle;
+		width:100%
+		height: 400px;		
+	}
+		#operation{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+		img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+		input{
+		width:10%;
+		margin-left:15px;
+		margin-right: 15px;
+		margin-top: 20px;
+		font-size:20px;
+	}
+		select{
+			height:30px;
+			margin-top: 20px;
+		}
+	</style>
+</body>
+</html>
